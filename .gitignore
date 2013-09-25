@@ -1,5 +1,9 @@
 *.class
 
+#gitignore
+*.project
+*.classpath
+
 # Package Files #
 *.jar
 *.war
