@@ -26,10 +26,8 @@ No line should be more than 80 characters long.
 
 Bracketing should be as follows:
 
- * For a construct (e.g. `for`, `if` or `while`) with one instruction in it
- ..* if loop + instruction is less than 80 characters keep it all on one line
- ..* if loop + instruction is more than 80 characters, move instruction onto a
- new line
+ * For a construct (e.g. `for`, `if` or `while`) with one instruction in it move
+ instruction onto a new line with no new brackets
  * Otherwise bracketing should open the bracket on the same line, and close on a
  separate line
 
@@ -48,9 +46,8 @@ Use a tab-size of 2 spaces and use tabs over spaces.
     if (x < y) {
       int k = x + y;
       System.out.println("x + y = " + (x + y));
-    } else {
+    } else
       System.out.println(x + " >= " + y);
-    }
     return 42;
   }
 ```
