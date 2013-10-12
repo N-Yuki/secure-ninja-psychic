@@ -1,0 +1,28 @@
+Usage
+-----
+Running the simulation:
+python3 simulation.py
+
+Testing the executable produced:
+make test
+
+Resetting the environment:
+make reset
+
+Details
+-------
+We have one Developer writing a program which uses a module from two different SoftWareHouses.
+A secret keyword is attached to each license. This allows exclusive communication between the purchasing Developer's and SoftWareHouse's software components just for that single link.
+The LinkBroker does not know this secret, and the license details by itself have no value, so there is little incentive for the LinkBroker to misuse this license. Also, the object files received by the LinkBroker can only communicate with the purchaser/seller of the license so these object files individually have little value too.
+The LinkBroker is still necessary here to ensure that each license is used for a single link. If the Developer received the object file directly, they could potentially link as many times as they wanted since they have all the information to do so. As for the LinkBrokers, they would want as many links to be requested as possible to increase revenue from the SoftWareHouses.
+
+The final "product" should be an executable otherwise the purpose of the LinkBroker is meaningless.
+
+Misc. Issues
+------------
+- LinkBrokers may misuse the final executable. This may not be an issue in this near future where software is freely available to everyone.
+- Developers may write software that are just a service layer on top of a SoftWareHouse's component. The distribution of this would allow anyone to use this component without a license from the SoftWareHouse.
+
+Both these issues could be prevented with a stricter distribution system. For example, an executable may be made to run on a particular system and the consumer pays the developer for the software before the linking process.
+- The LinkBroker will now have little use of the final executable.
+- The Developer will have to pay the SoftWareHouse per user anyway.
